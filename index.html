@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umair | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Umair.dev</div>
+        <ul class="nav-links">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button id="theme-toggle" class="theme-btn">🌙</button></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Software Engineer</h1>
+        <p>I am Umair, and I am building my skills.</p>
+        <button onclick="location.href='#contact'">Contact Me</button>
+    </div>
+
+    <section class="skills" id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>HTML5</h3>
+                <div class="progress-bar"><div class="fill" style="width: 90%;"></div></div>
+                <p>Structure & SEO</p>
+            </div>
+            <div class="skill-card">
+                <h3>CSS3</h3>
+                <div class="progress-bar"><div class="fill" style="width: 85%;"></div></div>
+                <p>Design & Animation</p>
+            </div>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <div class="progress-bar"><div class="fill" style="width: 60%;"></div></div>
+                <p>Logic & Interactivity</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(45deg, #f39c12, #e74c3c);">
+                    <span>Coming Soon</span>
+                </div>
+                <div class="project-info">
+                    <h3>JavaScript Game</h3>
+                    <p>A logic-based game designed to test user reflexes and problem-solving.</p>
+                    <a href="#" class="project-link">View Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <span>Project Preview</span>
+                </div>
+                <div class="project-info">
+                    <h3>Personal Portfolio</h3>
+                    <p>A modern, responsive website built with HTML5 and CSS3 featuring 3D effects.</p>
+                    <a href="#" class="project-link">View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Get In Touch</h2>
+        <p>I'm currently looking for job opportunities!</p>
+        <a href="mailto:climatrixlabs.ai@gmail.com?subject=Job Opportunity" class="contact-btn">Email Me</a>
+    </section>
+
+    <footer style="text-align: center; padding: 35px; background: #2c3e50; color: white; margin-top: 50px;">
+        <p>&copy; 2026 Umair | Built with passion at 2:00 AM</p>
+    </footer>
+
+    <div class="social-sidebar">
+        <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <button id="scrollTop" class="scroll-btn"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // --- Scroll to Top Logic ---
+        const scrollBtn = document.getElementById("scrollTop");
+        window.onscroll = function() {
+            if (document.documentElement.scrollTop > 300) {
+                scrollBtn.classList.add("show");
+            } else {
+                scrollBtn.classList.remove("show");
+            }
+        };
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // --- Dark Mode Logic ---
+        const themeBtn = document.getElementById("theme-toggle");
+        themeBtn.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            themeBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+        });
+    </script>
+</body>
+</html>

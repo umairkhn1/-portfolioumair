@@ -1,0 +1,422 @@
+/* Dark Mode Colors */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .navbar {
+    background: #000000;
+}
+
+.dark-mode .skill-card, .dark-mode .project-card {
+    background: #2d2d2d;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+/* This ensures the entire page background stays dark */
+.dark-mode, 
+.dark-mode section, 
+.dark-mode .hero {
+    background-color: #1a1a1a !important;
+    color: #ffffff;
+}
+
+/* Fixes the "white gaps" in your skills and project areas */
+.dark-mode .skills, 
+.dark-mode .projects, 
+.dark-mode .contact {
+    background-color: #1a1a1a;
+}
+
+/* Makes your project cards pop against the dark background */
+.dark-mode .project-card, 
+.dark-mode .skill-card {
+    background: #2d2d2d;
+    border: 1px solid #444; /* Adds a subtle border so they don't disappear */
+}
+/* This targets the headings inside your cards during dark mode */
+.dark-mode .skill-card h3, 
+.dark-mode .project-card h3 {
+    color: #ffffff !important;
+}
+
+/* This makes the descriptions (like 'Structure & SEO') light grey so they are easy to read */
+.dark-mode .skill-card p, 
+.dark-mode .project-card p {
+    color: #cccccc;
+}
+.dark-mode .social-link {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent circles */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* 2. The Navigation Bar */
+nav {
+    background-color: #2c3e50;
+    padding: 15px 0;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    color: white;
+    margin: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+li:hover {
+    color: #3498db;
+    transform: scale(1.1);
+}
+
+/* 3. The Hero Section (The Big Update) */
+.hero {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Pro Gradient */
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* 4. The Button (3D Effect) */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
+}
+/* This makes the button "sink" when you actually click it */
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+/* 1. Container for the cards */
+.skills {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Makes them stack on small screens */
+}
+
+/* 2. The Individual Cards */
+.skill-card {
+    background: white;
+    padding: 30px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    border: 1px solid #eee;
+}
+
+/* 3. The Hover Magic */
+.skill-card:hover {
+    transform: translateY(-10px); /* Card pops up */
+    border-color: #3498db;
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+    cursor: pointer;
+}
+
+.skill-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+/* This is the grey background of the bar */
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 10px;
+    width: 100%;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+/* This is the colorful moving part */
+.fill {
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    height: 100%;
+    border-radius: 10px;
+    transition: 1.5s ease-in-out; /* This makes it animate when you refresh */
+}
+/* 1. Projects Section Layout */
+.projects {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Contrast against the grey body */
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* 2. The Project Card */
+.project-card {
+    width: 350px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden; /* This clips the image to the rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* 3. The Image Placeholder */
+.project-image {
+    height: 200px;
+    background: linear-gradient(45deg, #3498db, #9d61c5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* 4. The Info Section */
+.project-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    border-bottom: 2px solid #3498db;
+}
+/* Update the existing project-image style with a transition */
+.project-image {
+    height: 200px;
+    background: linear-gradient(45deg, #3498db, #8e44ad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s; /* Makes the color shift smooth */
+}
+
+/* Change the gradient colors when the card is hovered */
+.project-card:hover .project-image {
+    background: linear-gradient(45deg, #2ecc71, #3498db);
+    letter-spacing: 2px; /* Spreads the letters out slightly */
+}
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Adds space between the cards */
+    flex-wrap: wrap; /* Ensures they stack on mobile phones */
+    margin-top: 30px;
+}
+.social-sidebar {
+    position: fixed;
+    left: 15px; /* Moves it away from the very edge */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2000;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background: rgba(44, 62, 80, 0.9); /* Dark but slightly see-through */
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Makes them perfect circles */
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.4s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.social-link:hover {
+    background: #3498db;
+    transform: scale(1.2) translateX(5px); /* Pops out when you hover */
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #2c3e50;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2000; /* Higher than the sidebar */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 35px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #2ecc71; /* Turns green when you're ready to talk! */
+    transform: translateY(-3px);
+}
+/* This triggers when the screen is 768px wide or smaller */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* We'll hide the links for now to keep it clean on mobile */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Makes the title smaller so it fits */
+    }
+
+    .skills-container, .project-container {
+        flex-direction: column; /* Stacks cards on top of each other */
+        align-items: center;
+    }
+
+    .skill-card, .project-card {
+        width: 90%; /* Makes cards wider on mobile */
+        margin-bottom: 20px;
+    }
+    
+    .social-sidebar {
+        left: 5px; /* Pulls the icons closer to the edge for more thumb room */
+    }
+}
+.contact-btn {
+    /* ... keep your current styles ... */
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.contact-btn:hover {
+    background: #2ecc71; /* Smooth transition to green */
+    transform: scale(1.1) translateY(-5px); /* Pops up and gets slightly bigger */
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.4);
+}
+.scroll-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0; /* Hidden by default */
+    transition: all 0.4s ease;
+    z-index: 3000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* When the 'show' class is added via JS */
+.scroll-btn.show {
+    opacity: 1;
+}
+
+.scroll-btn:hover {
+    background: #2ecc71;
+    transform: translateY(-5px);
+}
